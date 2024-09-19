@@ -54,8 +54,7 @@ namespace ArabaTakipSistemi
                                 case "1":
                                     Console.WriteLine("1-Araba Listesini Gör");
                                     Console.WriteLine("2-Araba Kirala");
-                                    Console.WriteLine("3-Araba Teslim");
-                                    Console.WriteLine("4-Fiyat Hakkında Bilgi");
+                                    Console.WriteLine("3-Fiyat Hakkında Bilgi");
                                     string secim2 = Console.ReadLine();
                                     switch (secim2)
                                     {
@@ -66,12 +65,7 @@ namespace ArabaTakipSistemi
                                         case "2":
                                             Kirala();
                                             break;
-
                                         case "3":
-                                            //kod gelecekk
-                                            break;
-
-                                        case "4":
                                             Bilgi();
                                             break;
 
