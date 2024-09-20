@@ -13,16 +13,12 @@ namespace ArabaTakipSistemi
         static void Main(string[] args)
         {
             baslangıc();
-
             Console.ReadLine();
-
         }
-
         private static void GirisYap()
         {
             using (var giris = new AracTakip())
             {
-
                 Console.Write("Kullanici Adınızı Girin: ");
                 string ad = Console.ReadLine();
                 Console.Write("Şifrenizi Girin: ");
@@ -72,8 +68,6 @@ namespace ArabaTakipSistemi
                                         default:
                                             Console.WriteLine("Geçerli İşlem Yapınız..");
                                             break;
-
-
                                     }
                                     break;
                                 default:
@@ -94,10 +88,7 @@ namespace ArabaTakipSistemi
                         default:
                             Console.WriteLine("Geçerli İşlem Yapınız..");
                             break;
-
-
                     }
-
                 }
                 else
                 {
@@ -124,12 +115,8 @@ namespace ArabaTakipSistemi
                 {
                     Console.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", araba.Kod, "     ", araba.Marka, "     ", araba.Model, "    ", araba.Yıl, "    ", araba.Yakıt, "    ", araba.Fiyat);
                 }
-
-
             }
         }
-
-
         private static void Kirala()
         {
             using (var kirala = new AracTakip())
@@ -150,10 +137,7 @@ namespace ArabaTakipSistemi
 
                 Console.Write("Araba Modeli Girin: ");
                 string model = Console.ReadLine();
-
-
-
-
+                
                 Random rnd = new Random();
                 int sayi = rnd.Next(1000, 9999);
                 Console.WriteLine("Doğrulama Kodunuz: " + sayi);
@@ -187,12 +171,6 @@ namespace ArabaTakipSistemi
                         Console.WriteLine("Hatalı Seçim...");
                         break;
                 }
-
-
-
-
-
-
             }
         }
 
@@ -200,8 +178,6 @@ namespace ArabaTakipSistemi
         {
             using (var bilgi = new AracTakip())
             {
-
-
                 using (var deger = new AracTakip())
                 {
                     var min = deger.arabalar.Min(x => x.Fiyat);
@@ -211,9 +187,8 @@ namespace ArabaTakipSistemi
                         Console.WriteLine($"Taban değer: {min}");
                         Console.BackgroundColor = ConsoleColor.Black;
                         Console.ForegroundColor = ConsoleColor.White;
-                
 
-                    var max = deger.arabalar.Max(x => x.Fiyat);
+                        var max = deger.arabalar.Max(x => x.Fiyat);
                    
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
@@ -232,9 +207,6 @@ namespace ArabaTakipSistemi
 
 
                 }
-
-
-
                 Console.WriteLine("----------------------");
                 Console.WriteLine("Geri Dönmek için 1'e basın..");
                 string sec = Console.ReadLine();
@@ -270,13 +242,8 @@ namespace ArabaTakipSistemi
                         Console.WriteLine("Geçerli İşlem Yapın");
                         break;
                 }
-
-
-
             }
         }
-
-
         private static void baslangıc()
         {
             Console.WriteLine("Yıldız Araç Kiralamaya Hoş Geldiniz.. Yapmak İstediğiniz İşlemi Seçin..");
